@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detection Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Detection Results</h1>
+
+        <div class="image-section">
+            <div>
+                <h3>Logo 1</h3>
+                <img src="{{ image1_url }}" alt="Uploaded Logo 1">
+                <p>Result: <strong>{{ result1 }}</strong></p>
+            </div>
+
+            <div>
+                <h3>Logo 2</h3>
+                <img src="{{ image2_url }}" alt="Uploaded Logo 2">
+                <p>Result: <strong>{{ result2 }}</strong></p>
+            </div>
+        </div>
+
+        <h2>Similarity Score: <strong>{{ similarity }}%</strong></h2>
+        <a href="/">Try Another Comparison</a>
+    </div>
+</body>
+</html>
